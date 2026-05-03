@@ -1,0 +1,90 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tableHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 10px;
+}
+
+.count {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+.tableScroll {
+  overflow-y: auto;
+  flex: 1;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.table thead th {
+  padding: 6px 8px;
+  text-align: left;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  font-size: 9px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--surface);
+}
+
+.table tbody td {
+  padding: 5px 8px;
+  border-bottom: 1px solid rgba(33, 38, 45, 0.5);
+  color: var(--text);
+  transition: background 0.15s;
+}
+
+.table tbody tr:hover td {
+  background: rgba(255,255,255,0.03);
+}
+
+.rowLatest td {
+  color: var(--accent) !important;
+}
+
+.conf {
+  color: var(--accent3) !important;
+}
+
+.muted {
+  color: var(--text-muted) !important;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+.shimmer {
+  background: linear-gradient(90deg, var(--text-muted) 25%, var(--text) 50%, var(--text-muted) 75%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
