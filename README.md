@@ -1,2 +1,0 @@
-# face-detection-system1
-
